@@ -5,131 +5,84 @@
     font-family: sans-serif;
 }
 
+:root {
+    --background-image: url(./images/bg-mobile.svg);
+
+    --background-color: hsl(257, 40%, 49%);
+    --white: rgb(255, 255, 255);
+    --font-family: "Poppins", sans-serif;
+}
+
 body {
-    background-image: url(./images/bg-mobile.svg);
-    background-color: hsl(257, 40%, 49%);
+    background-image: var(--background-image);
+    background-color: var(--background-color);
+    color: var(--white);
+    font-family: var(--font-family);
     background-blend-mode: overlay;
     background-repeat: no-repeat;
-    max-width: 375px;
+    background-size: cover;
     text-align: center;
-    color: white;
+    height: 100vh;
 }
 
-.main {
-    padding: 1em;
-    max-width: 375px;
-    min-width: 375px;
-    height: 38em;
+/* Header */
+.header,
+.figure {
+    width: 100%;
+    height: 15rem;
 }
 
-.images {
-    height: 50%;
+.header .figure {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    align-content: center;
 }
 
 .logo {
-    width: 95px;
-    margin-left: 3em;
+    width: 14rem;
+    margin-left: 2.5rem;
 }
 
-.mocups {
-    width: 250px;
-    margin-left: 3em;
-}
+/* Main Section */
 
 .texts {
-    height: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    align-content: center;
     align-items: center;
+    gap: 1.5rem;
+}
+
+.texts .figure {
+    width: 85%;
+}
+
+.figure .mocups {
+    width: 100%;
+}
+
+.text-title {
+    font-size: 2.5rem;
+    max-width: 90%;
+    line-height: 1.4;
+}
+
+.text-parag {
+    max-width: 90%;
+    font-size: 1.3rem;
+    font-weight: 100;
+    line-height: 1.4rem;
+    letter-spacing: 0.1rem;
 }
 
 .btn {
-    background-color: white;
+    width: 35%;
+    background-color: var(--white);
+    color: var(--background-color);
+    border-radius: 2rem;
     border: none;
-    border-radius: 30px;
-    color: hsl(257, 40%, 49%);
-    padding: 15px 32px;
-    text-align: center;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 200;
     text-decoration: none;
-    display: inline-block;
-    font-size: 13px;
-    width: 15em;
-}
-
-@media screen and (min-width: 400px) {
-    body {
-        background-image: url(./images/bg-desktop.svg);
-        background-color: hsl(257, 40%, 49%);
-        background-blend-mode: overlay;
-        background-repeat: no-repeat;
-        max-width: 1315px;
-        text-align: center;
-        color: white;
-    }
-
-    .main {
-        padding: 1em;
-        max-width: 1215px;
-        height: 40em;
-        display: flex;
-        margin: 0 auto;
-    }
-
-    .images {
-        height: 35em;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-
-    .logo {
-        width: 130px;
-        margin-left: 3em;
-    }
-
-    .mocups {
-        width: 35em;
-        margin-left: 3em;
-    }
-
-    .texts {
-        display: block;
-        padding-top: 10em;
-        margin-left: 4em;
-        text-align: left;
-    }
-
-    .pageTitle {
-        font-size: 3em;
-    }
-
-    .parag {
-        margin-top: 0.5em;
-        font-size: 1.2em;
-        font-weight: lighter;
-    }
-
-    .btn {
-        background-color: white;
-        border: none;
-        border-radius: 30px;
-        color: hsl(257, 40%, 49%);
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 13px;
-        width: 15em;
-        margin-top: 2em;
-    }
-
-    .btn:hover {
-        cursor: pointer;
-        background-color: hsl(300, 69%, 71%);
-        color: white;
-    }
 }
